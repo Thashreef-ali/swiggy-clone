@@ -13,7 +13,7 @@ function Search() {
     event.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:4000/api/search?query=${query}`);
+      const res = await fetch(`https://swiggy-clone-backend-g9z2.onrender.com/api/search?query=${query}`);
       const data = await res.json();
       setResults(data.items || []);
     } catch (err) {

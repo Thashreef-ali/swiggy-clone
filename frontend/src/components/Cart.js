@@ -20,7 +20,7 @@ function Cart() {
 
       try {
         const response = await fetch(
-          `http://localhost:4000/api/upload?userId=${userId}`
+          `https://swiggy-clone-backend-g9z2.onrender.com/api/upload?userId=${userId}`
         );
         const data = await response.json();
 
@@ -48,7 +48,7 @@ function Cart() {
       const userId = user ? user._id : null;
       if (!userId) return;
 
-      const response = await fetch("http://localhost:4000/api/remove", {
+      const response = await fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/remove", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ function Cart() {
 
   const [logo, setLogo] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/logo")
+    fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/logo")
       .then((response) => response.json())
       .then((data) => setLogo(data))
       .catch((err) => console.error("Error fetching logo:", err));

@@ -5,10 +5,6 @@ import FoodItems from "./components/FoodItems";
 import Restuarants from "./components/Restuarants";
 import Cart from "./components/Cart";
 import Login from "./components/Login";
-// import Corporate from "./components/Corporate";
-// import Buisness from "./components/Buisness";
-// import Delivering from "./components/Delivering";
-import Contact from "./components/Contact";
 import Help from "./components/Help";
 import Search from "./components/Search";
 import Offers from "./components/Offers";
@@ -25,10 +21,6 @@ function App() {
           <Route path="/restuarants/hotel/:hotel" element={<Restuarants />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/corporate" element={<Corporate />} />
-          <Route path="/buisness" element={<Buisness />} />
-          <Route path="/delivering-for-everyone" element={<Delivering />} /> */}
-          <Route path="/contact-us" element={<Contact />} />
           <Route path="/help" element={<Help />} />
           <Route path="/search" element={<Search />} />
           <Route path="/offers" element={<Offers />} />

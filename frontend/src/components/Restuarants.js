@@ -13,7 +13,7 @@ function Restaurants() {
   const [popupType, setPopupType] = useState(""); // success or warning
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/restuarants/hotel/${hotel}`)
+    fetch(`https://swiggy-clone-backend-g9z2.onrender.com/api/restuarants/hotel/${hotel}`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data) && data.length > 0) {
@@ -38,7 +38,7 @@ function Restaurants() {
     const userId = user._id; 
   
     try {
-      const response = await fetch("http://localhost:4000/api/upload", {
+      const response = await fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/upload", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

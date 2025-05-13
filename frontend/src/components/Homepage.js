@@ -7,7 +7,7 @@ import Footer from "./Footer";
 function Homepage() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/category")
+    fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/category")
       .then((response) => response.json())
       .then((data) => setCategories(data))
       .catch((error) => console.error("Error fetching categories:", error));
@@ -15,7 +15,7 @@ function Homepage() {
 
   const [chhindwara, setchhindwara] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/fslider")
+    fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/fslider")
       .then((response) => response.json())
       .then((data) => setchhindwara(data))
       .catch((error) => console.error("Error fetching details:", error));
@@ -23,7 +23,7 @@ function Homepage() {
 
   const [fooddelivery, setfooddelivery] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/secslider")
+    fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/secslider")
       .then((response) => response.json())
       .then((data) => setfooddelivery(data))
       .catch((error) => console.error("Error fetching details:", error));
@@ -31,7 +31,7 @@ function Homepage() {
 
   const [cities,setCities] = useState([])
   useEffect(() => {
-    fetch("http://localhost:4000/api/city")
+    fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/city")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched cities:", data); // Check the structure of the data here

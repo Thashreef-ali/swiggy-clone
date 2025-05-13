@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin:"http://localhost:3000",
+  origin:"https://swiggy-clone-backend-g9z2.onrender.com",
   methods:["GET","POST","PUT","DELETE"],
   allowedHeaders:["Content-Type"]
 }));

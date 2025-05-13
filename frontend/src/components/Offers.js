@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 const Offers = () => {
   const [offers, setOffers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/offers")
+    fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/offers")
       .then((res) => res.json())
       .then((data) => setOffers(data))
       .catch((error) => console.error("Error fetching offers:", error));

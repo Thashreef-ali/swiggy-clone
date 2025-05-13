@@ -18,7 +18,7 @@ const Profile = () => {
 
   const handleUpdate = async () => {
     try {
-      const res = await fetch(`http://localhost:4000/api/user/${user._id}`, {
+      const res = await fetch(`https://swiggy-clone-backend-g9z2.onrender.com/api/user/${user._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

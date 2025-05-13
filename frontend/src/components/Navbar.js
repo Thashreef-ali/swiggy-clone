@@ -46,7 +46,7 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/logo")
+    fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/logo")
       .then((response) => response.json())
       .then((data) => setLogo(data))
       .catch((err) => console.error("Error fetching logo:", err));

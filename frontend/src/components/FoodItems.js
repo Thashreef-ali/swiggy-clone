@@ -14,7 +14,7 @@ function FoodItems() {
   const sortRef = useRef(); // Ref for dropdown
 
   useEffect(() => {
-    const url = `http://localhost:4000/api/fooditems/type/${type}?sortBy=${sortBy}&order=${order}`;
+    const url = `https://swiggy-clone-backend-g9z2.onrender.com/api/fooditems/type/${type}?sortBy=${sortBy}&order=${order}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

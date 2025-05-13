@@ -14,7 +14,7 @@ const Auth = () => {
 
     try {
       if (isLogin) {
-        const response = await fetch("http://localhost:4000/api/login", {
+        const response = await fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
@@ -24,7 +24,7 @@ const Auth = () => {
         if (!response.ok) throw new Error(data.error);
 
         const userId = data.user._id;
-        const userRes = await fetch(`http://localhost:4000/api/user/${userId}`);
+        const userRes = await fetch(`https://swiggy-clone-backend-g9z2.onrender.com/api/user/${userId}`);
         const userData = await userRes.json();
         if (!userRes.ok) throw new Error(userData.error);
 
@@ -36,7 +36,7 @@ const Auth = () => {
         alert("Login successful!");
         navigate("/");
       } else {
-        const response = await fetch("http://localhost:4000/api/signup", {
+        const response = await fetch("https://swiggy-clone-backend-g9z2.onrender.com/api/signup", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, password }),

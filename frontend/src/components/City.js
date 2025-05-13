@@ -9,17 +9,17 @@ const City = () => {
   const [city, setCity] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/city/${name}`)
+    fetch(`https://swiggy-clone-backend-g9z2.onrender.com/api/city/${name}`)
       .then((res) => res.json())
       .then((data) => setCity(data))
       .catch((err) => console.error("Error loading city:", err));
   }, [name]);
   const [restuarents, setRestuarents] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:4000/api/cityresto/${name}`)
+    fetch(`https://swiggy-clone-backend-g9z2.onrender.com/api/cityresto/${name}`)
       .then((res) => res.json())
       .then((data) => setRestuarents(data))
-      .catch((err) => console.error("Error loading restaurants:", err));
+      .catch((err) => console.error("Error loading restaurants: ", err));
   }, [name]);
 
   return (
