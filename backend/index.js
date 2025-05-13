@@ -7,7 +7,9 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin:"https://swiggy-clone-backend-g9z2.onrender.com",
+  origin:['https://swiggy-clone-backend-g9z2.onrender.com',
+    'https://swiggy-clone-frontend-7um1.onrender.com'
+  ],
   methods:["GET","POST","PUT","DELETE"],
   allowedHeaders:["Content-Type"]
 }));
