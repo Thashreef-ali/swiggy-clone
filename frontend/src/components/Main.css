@@ -888,6 +888,50 @@ p {
   opacity: .7;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .sidebar-header {
+    margin-top: 60px;
+  }
+
+  .get-location-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .location-input {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 12px;
+  }
+
+  .sidebar-header {
+    margin-top: 40px;
+  }
+
+  .get-location-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .location-input {
+    font-size: 14px;
+  }
+
+  .close-btn {
+    font-size: 20px;
+  }
+}
+
 /* login */
 .auth-container {
   display: flex;
